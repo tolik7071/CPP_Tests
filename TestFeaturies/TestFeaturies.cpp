@@ -15,6 +15,7 @@ int main()
 	UtilitiesTest::CheckTypeTest();
 
 	DateAndTimeTest::ChronoIntervalTest();
+	DateAndTimeTest::DateTimeTests();
 
     return 0;
 }

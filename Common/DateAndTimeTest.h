@@ -3,4 +3,5 @@
 namespace DateAndTimeTest
 {
 	void ChronoIntervalTest();
+	void DateTimeTests();
 }
