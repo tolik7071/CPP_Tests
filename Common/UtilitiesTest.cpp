@@ -1,4 +1,6 @@
+#if defined(_MSC_VER)
 #include "stdafx.h"
+#endif // _MSC_VER
 #include "UtilitiesTest.h"
 #include "common.h"
 
@@ -52,6 +54,8 @@ void UtilitiesTest::CheckConstructorTest()
 
 void UtilitiesTest::CheckTypeTest()
 {
+    LOG_FUNCTION();
+    
 	enum class TestColor
 	{
 		red,
