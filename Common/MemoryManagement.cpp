@@ -13,8 +13,8 @@ void MemoryManagement::AutoPtrTest()
 	std::auto_ptr<MyData> owner(new MyData());
 	std::auto_ptr<MyData> otherOwner;
 	otherOwner = owner;
-	// now 'otherOwner' has ownership and 'owner' returns nullptr 
-	std::cout << (const void *)(owner.get()) << std::endl;
+	assert(owner.get() == nullptr);
+	assert(otherOwner.get() != nullptr);
 
 	try
 	{
@@ -81,3 +81,4 @@ MemoryManagement::MyData::~MyData()
 {
 	LOG_METHOD();
 }
+
