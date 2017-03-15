@@ -11,7 +11,7 @@ namespace MemoryManagement
 	{
 		public:
 
-			MyData();
-			virtual ~MyData();
+		MyData();
+		virtual ~MyData();
 	};
 }

@@ -1,11 +1,13 @@
+#if defined(_MSC_VER)
 #include "stdafx.h"
+#endif // _MSC_VER
 #include "MemoryManagement.h"
 #include "UtilitiesTest.h"
 #include "DateAndTimeTest.h"
 #include "ContainersTests.h"
 #include "LocaleTests.h"
 
-int main()
+int main(int argc, const char * argv[])
 {
 	MemoryManagement::AutoPtrTest();
 	MemoryManagement::SharedPtrTest();

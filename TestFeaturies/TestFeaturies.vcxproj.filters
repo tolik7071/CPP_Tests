@@ -50,19 +50,19 @@
     <ClCompile Include="TestFeaturies.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\MemoryManagement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Common\UtilitiesTest.cpp">
+    <ClCompile Include="..\Common\ContainersTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\DateAndTimeTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\ContainersTests.cpp">
+    <ClCompile Include="..\Common\LocaleTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Common\LocaleTests.cpp">
+    <ClCompile Include="..\Common\MemoryManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\UtilitiesTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

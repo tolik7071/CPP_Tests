@@ -1,4 +1,6 @@
+#if defined(_MSC_VER)
 #include "stdafx.h"
+#endif // _MSC_VER
 #include "MemoryManagement.h"
 #include "common.h"
 #include <memory>
@@ -49,7 +51,7 @@ void MemoryManagement::UniquePtrTest()
 {
 	LOG_FUNCTION();
 
-	std::unique_ptr<MyData> ptr1 = std::make_unique<MyData>();
+	std::unique_ptr<MyData> ptr1(new MyData());
 	assert(ptr1.get() != nullptr);
 
 	std::unique_ptr<MyData> ptr2 = std::move(ptr1);

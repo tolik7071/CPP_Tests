@@ -12,6 +12,7 @@
 #if defined(__cplusplus)
 
 #include <iostream>
+#include <memory>
 
 #if defined(__GNUC__)
 #define __FUNCTION_NAME__ __PRETTY_FUNCTION__
@@ -19,9 +20,9 @@
 #define __FUNCTION_NAME__ __FUNCTION__
 #endif
 
-#define LOG_METHOD()															 \
-{																				 \
-    std::cout << __FUNCTION_NAME__ << "\t" << std::addressof(this) << std::endl; \
+#define LOG_METHOD()															  \
+{																				  \
+    std::cout << __FUNCTION_NAME__ << "\t" << std::addressof(*this) << std::endl; \
 }
 
 #define LOG_FUNCTION()									\
@@ -29,9 +30,9 @@
 	std::cout << __FUNCTION_NAME__ << std::endl;		\
 }
 
-#define LOG_RESULT_OF_BOOL(op)												\
-{																			\
-	std::cout << (#op) << " : " << std::boolalpha << (##op) << std::endl;   \
+#define LOG_RESULT_OF_BOOL(op)											  \
+{																		  \
+	std::cout << (#op) << " : " << std::boolalpha << (op) << std::endl;   \
 }
 
 #endif // __cplusplus
