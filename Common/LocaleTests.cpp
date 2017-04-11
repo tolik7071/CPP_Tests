@@ -11,6 +11,4 @@ void LocaleTests::LocaleTest()
 
     std::locale locale = std::locale::classic();
 	std::cout << locale.name() << std::endl;
-    
-    locale.messages
 }

@@ -6,7 +6,7 @@
 #include "DateAndTimeTest.h"
 #include "ContainersTests.h"
 #include "LocaleTests.h"
-//#include "StreamTests.h"
+#include "StreamTests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
 
 	LocaleTests::LocaleTest();
 
-//	StreamTests::StringStreamTest();
+	StreamTests::StringStreamTest();
 
     return 0;
 }
