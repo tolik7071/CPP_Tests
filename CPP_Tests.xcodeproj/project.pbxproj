@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FB082681EA21C89004A44C1 /* FunctionObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB082661EA21C89004A44C1 /* FunctionObjects.cpp */; };
 		1FC2B96F1E9C9AD300E4252A /* StreamTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2B96D1E9C9AD300E4252A /* StreamTests.cpp */; };
 		1FCEB2471E9B5A370021F716 /* TestFeaturies.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEB2461E9B5A370021F716 /* TestFeaturies.cpp */; };
 		1FCEB24A1E9B5A710021F716 /* ContainersTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEB2491E9B5A710021F716 /* ContainersTests.cpp */; };
@@ -30,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		1F847AEB1E9B59F000D818BA /* CPP_Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPP_Tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB082661EA21C89004A44C1 /* FunctionObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FunctionObjects.cpp; path = Common/FunctionObjects.cpp; sourceTree = "<group>"; };
+		1FB082671EA21C89004A44C1 /* FunctionObjects.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FunctionObjects.hpp; path = Common/FunctionObjects.hpp; sourceTree = "<group>"; };
 		1FC2B96D1E9C9AD300E4252A /* StreamTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StreamTests.cpp; path = Common/StreamTests.cpp; sourceTree = "<group>"; };
 		1FC2B96E1E9C9AD300E4252A /* StreamTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamTests.h; path = Common/StreamTests.h; sourceTree = "<group>"; };
 		1FCEB2461E9B5A370021F716 /* TestFeaturies.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestFeaturies.cpp; path = TestFeaturies/TestFeaturies.cpp; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1FCEB2531E9B5AB50021F716 /* common.h */,
+				1FB082671EA21C89004A44C1 /* FunctionObjects.hpp */,
 				1FCEB2541E9B5AB50021F716 /* ContainersTests.h */,
 				1FCEB2551E9B5AB50021F716 /* DateAndTimeTest.h */,
 				1FCEB2561E9B5AB50021F716 /* LocaleTests.h */,
@@ -72,8 +76,9 @@
 				1FCEB24D1E9B5A7C0021F716 /* LocaleTests.cpp */,
 				1FCEB24B1E9B5A760021F716 /* DateAndTimeTest.cpp */,
 				1FCEB2491E9B5A710021F716 /* ContainersTests.cpp */,
-				1FCEB2461E9B5A370021F716 /* TestFeaturies.cpp */,
 				1FC2B96D1E9C9AD300E4252A /* StreamTests.cpp */,
+				1FB082661EA21C89004A44C1 /* FunctionObjects.cpp */,
+				1FCEB2461E9B5A370021F716 /* TestFeaturies.cpp */,
 				1F847AEC1E9B59F000D818BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				1FCEB24A1E9B5A710021F716 /* ContainersTests.cpp in Sources */,
 				1FCEB24C1E9B5A760021F716 /* DateAndTimeTest.cpp in Sources */,
 				1FCEB24E1E9B5A7C0021F716 /* LocaleTests.cpp in Sources */,
+				1FB082681EA21C89004A44C1 /* FunctionObjects.cpp in Sources */,
 				1FC2B96F1E9C9AD300E4252A /* StreamTests.cpp in Sources */,
 				1FCEB2501E9B5A800021F716 /* MemoryManagement.cpp in Sources */,
 				1FCEB2521E9B5A880021F716 /* UtilitiesTest.cpp in Sources */,

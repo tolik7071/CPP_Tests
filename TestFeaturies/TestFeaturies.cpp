@@ -7,6 +7,7 @@
 #include "ContainersTests.h"
 #include "LocaleTests.h"
 #include "StreamTests.h"
+#include "FunctionObjects.hpp"
 
 int main(int argc, const char * argv[])
 {
@@ -28,6 +29,10 @@ int main(int argc, const char * argv[])
 	LocaleTests::LocaleTest();
 
 	StreamTests::StringStreamTest();
+    
+    FunctionObjects::NonMembersCall();
+    FunctionObjects::StaticCall();
+    FunctionObjects::MembersCall();
 
     return 0;
 }
