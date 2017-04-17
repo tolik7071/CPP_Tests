@@ -14,6 +14,8 @@
 #include <functional>
 #include <assert.h>
 
+using namespace std::placeholders;
+
 static int Multiple(int value1, int value2)
 {
     return value1 * value2;
@@ -34,12 +36,10 @@ namespace FunctionObjects
     {
         SomeFunctions()
         {
-            
         }
         
         SomeFunctions(const SomeFunctions&)
-        {
-            
+        {   
         }
         
         static void F()
@@ -56,6 +56,21 @@ namespace FunctionObjects
         {
             return value1 * value2;
         }
+
+		//template<typename... T>
+		//T multiple(const T... args)
+		//{
+		//	T result = T();
+
+		//	std::initializer_list<std::string> arguments = { args... };
+		//	std::initializer_list<std::string>::iterator it = arguments.begin();
+		//	for (; it != arguments.end(); ++it)
+		//	{
+		//		//result *= *it;
+		//	}
+
+		//	return result;
+		//}
     };
 }
 

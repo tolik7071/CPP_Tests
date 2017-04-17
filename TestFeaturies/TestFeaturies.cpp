@@ -8,6 +8,8 @@
 #include "LocaleTests.h"
 #include "StreamTests.h"
 #include "FunctionObjects.hpp"
+#include <initializer_list>
+#include "RTTI_Tests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -33,6 +35,8 @@ int main(int argc, const char * argv[])
     FunctionObjects::NonMembersCall();
     FunctionObjects::StaticCall();
     FunctionObjects::MembersCall();
+
+	RTTI_TESTS::DynamicCastTest();
 
     return 0;
 }

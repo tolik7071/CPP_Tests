@@ -156,8 +156,10 @@
     <ClInclude Include="..\Common\common.h" />
     <ClInclude Include="..\Common\ContainersTests.h" />
     <ClInclude Include="..\Common\DateAndTimeTest.h" />
+    <ClInclude Include="..\Common\FunctionObjects.hpp" />
     <ClInclude Include="..\Common\LocaleTests.h" />
     <ClInclude Include="..\Common\MemoryManagement.h" />
+    <ClInclude Include="..\Common\RTTI_Tests.h" />
     <ClInclude Include="..\Common\StreamTests.h" />
     <ClInclude Include="..\Common\UtilitiesTest.h" />
     <ClInclude Include="stdafx.h" />
@@ -166,8 +168,10 @@
   <ItemGroup>
     <ClCompile Include="..\Common\ContainersTests.cpp" />
     <ClCompile Include="..\Common\DateAndTimeTest.cpp" />
+    <ClCompile Include="..\Common\FunctionObjects.cpp" />
     <ClCompile Include="..\Common\LocaleTests.cpp" />
     <ClCompile Include="..\Common\MemoryManagement.cpp" />
+    <ClCompile Include="..\Common\RTTITests.cpp" />
     <ClCompile Include="..\Common\StreamTests.cpp" />
     <ClCompile Include="..\Common\UtilitiesTest.cpp" />
     <ClCompile Include="stdafx.cpp">
