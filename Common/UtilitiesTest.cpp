@@ -61,7 +61,7 @@ void UtilitiesTest::CheckTypeTest()
 		red,
 		green,
 		blue
-	} colors;
+	};
 
 	LOG_RESULT_OF_BOOL(std::is_enum<TestColor>::value);
 	LOG_RESULT_OF_BOOL(std::is_class<TestColor>::value);
