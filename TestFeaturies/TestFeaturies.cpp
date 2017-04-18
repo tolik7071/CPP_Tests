@@ -9,7 +9,7 @@
 #include "StreamTests.h"
 #include "FunctionObjects.hpp"
 #include <initializer_list>
-#include "RTTI_Tests.h"
+//#include "RTTI_Tests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -36,7 +36,7 @@ int main(int argc, const char * argv[])
     FunctionObjects::StaticCall();
     FunctionObjects::MembersCall();
 
-	RTTI_TESTS::DynamicCastTest();
+//	RTTI_TESTS::DynamicCastTest();
 
     return 0;
 }
