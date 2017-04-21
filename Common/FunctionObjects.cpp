@@ -86,16 +86,22 @@ void FunctionObjects::MembersCall()
 {
     SomeFunctions f;
     
+    typedef std::function<int(int)> TFunction1;
     // the copy of f is used
     using std::placeholders::_1;
-    std::function<int(int)> c1 = std::bind(&SomeFunctions::cube, f, _1);
-    assert(c1(2) == 8);
+    TFunction1 c1 = std::bind(&SomeFunctions::cube, f, _1);
+    TFunction1::result_type result1 = c1(2);
+    assert(result1 == 8);
     
+    typedef std::function<int(int, int)> TFunction2;
     // the copy of f is used
     using std::placeholders::_2;
-    std::function<int(int, int)> c2 = std::bind(&SomeFunctions::multiple, f, _1, _2);
-    assert(c2(2, 2) == 4);
+    TFunction2 c2 = std::bind(&SomeFunctions::multiple, f, _1, _2);
+    TFunction2::result_type result2 = c2(2, 2);
+    assert(result2 == 4);
     
-    std::function<int(int, int)> c3 = std::bind(&SomeFunctions::multiple, &f, _1, _2);
-    assert(c3(2, 3) == 6);
+    typedef std::function<int(int, int)> TFunction3;
+    TFunction3 c3 = std::bind(&SomeFunctions::multiple, &f, _1, _2);
+    TFunction3::result_type result3 = c3(2, 3);
+    assert(result3 == 6);
 }
