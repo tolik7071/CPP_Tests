@@ -24,6 +24,7 @@ int main(int argc, const char * argv[])
 
 	DateAndTimeTest::ChronoIntervalTest();
 	DateAndTimeTest::DateTimeTests();
+	DateAndTimeTest::CastingIntervalsTest();
 
 	ContainersTests::ArrayTests();
 	ContainersTests::MapTests();

@@ -8,6 +8,7 @@
 #include <thread>
 #include <ctime>
 #include "common.h"
+#include <assert.h>
 
 void DateAndTimeTest::ChronoIntervalTest()
 {
@@ -60,4 +61,14 @@ void DateAndTimeTest::DateTimeTests()
     struct tm *tm = std::localtime(&now);
     std::cout << asctime(tm) << std::endl;
 #endif // _MSC_VER
+}
+
+using days = std::chrono::duration<int, std::ratio<3600 * 24>>;
+
+void DateAndTimeTest::CastingIntervalsTest()
+{
+	days oneDay(1);
+	
+	std::chrono::seconds::rep oneDayInseconds = std::chrono::duration_cast<std::chrono::seconds>(oneDay).count();
+	assert(oneDayInseconds == (3600 * 24));
 }
