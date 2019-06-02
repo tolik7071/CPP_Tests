@@ -22,7 +22,7 @@
     <ProjectGuid>{B3DAF24A-8CBA-4535-AD69-002555BC96D4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TestFeaturies</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -90,6 +90,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,6 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,6 +161,7 @@
     <ClInclude Include="..\Common\FunctionObjects.hpp" />
     <ClInclude Include="..\Common\LocaleTests.h" />
     <ClInclude Include="..\Common\MemoryManagement.h" />
+    <ClInclude Include="..\Common\PathTests.h" />
     <ClInclude Include="..\Common\RTTI_Tests.h" />
     <ClInclude Include="..\Common\StreamTests.h" />
     <ClInclude Include="..\Common\UtilitiesTest.h" />
@@ -171,6 +174,7 @@
     <ClCompile Include="..\Common\FunctionObjects.cpp" />
     <ClCompile Include="..\Common\LocaleTests.cpp" />
     <ClCompile Include="..\Common\MemoryManagement.cpp" />
+    <ClCompile Include="..\Common\PathTests.cpp" />
     <ClCompile Include="..\Common\RTTITests.cpp" />
     <ClCompile Include="..\Common\StreamTests.cpp" />
     <ClCompile Include="..\Common\UtilitiesTest.cpp" />

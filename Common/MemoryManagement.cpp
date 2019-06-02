@@ -12,6 +12,8 @@ void MemoryManagement::AutoPtrTest()
 {
 	LOG_FUNCTION();
 
+	// TODO: remove auto_ptr
+	/*
 	std::auto_ptr<MyData> owner(new MyData());
 	std::auto_ptr<MyData> otherOwner;
 	otherOwner = owner;
@@ -27,6 +29,7 @@ void MemoryManagement::AutoPtrTest()
 	{
 		;
 	}
+	*/
 }
 
 void MemoryManagement::SharedPtrTest()

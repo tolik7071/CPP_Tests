@@ -10,6 +10,7 @@
 #include "FunctionObjects.hpp"
 #include <initializer_list>
 #include "RTTI_Tests.h"
+#include "PathTests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -38,6 +39,8 @@ int main(int argc, const char * argv[])
     FunctionObjects::MembersCall();
 
 	RTTI_TESTS::DynamicCastTest();
+
+	PathTests::PathTests();
 
     return 0;
 }
