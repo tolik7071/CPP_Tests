@@ -25,6 +25,9 @@ void ContainersTests::ArrayTests()
 
 	ptr++;
 	assert(strcmp(ptr->data(), "String 2") == 0);
+
+	ptr++;
+	assert(strcmp(ptr->data(), "String 3") == 0);
 }
 
 void ContainersTests::MapTests()
@@ -47,4 +50,15 @@ void ContainersTests::MapTests()
 			std::cout << pair.first << ": " << *(pair.second.get()) << std::endl;
 		}
 	);
+
+	int index = 5;
+	TStringMap::const_iterator iterator = std::find_if(strings.begin(), strings.end(),
+		[index](const TStringMap::value_type& pair) -> bool
+		{
+			return pair.first == index;
+		}
+	);
+
+	assert((*iterator).first == index);
+	assert((*iterator).second->compare(std::string(std::to_string(index))) == 0);
 }
