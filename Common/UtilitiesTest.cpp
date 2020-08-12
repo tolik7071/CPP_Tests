@@ -67,3 +67,15 @@ void UtilitiesTest::CheckTypeTest()
 	LOG_RESULT_OF_BOOL(std::is_class<TestColor>::value);
 	LOG_RESULT_OF_BOOL(std::is_empty<A>::value);
 }
+
+void UtilitiesTest::LambdaTest()
+{
+	auto minLambda = []<typename T>(const T & t1, const T & t2) -> bool
+	{
+		return t1 < t2;
+	};
+
+	assert(false == minLambda(2, 1));
+	assert(true == minLambda(2, 10));
+	assert(true == minLambda(std::string("A"), std::string("Z")));
+}

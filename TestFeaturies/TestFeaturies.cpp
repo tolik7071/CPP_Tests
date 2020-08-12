@@ -22,6 +22,7 @@ int main(int argc, const char * argv[])
 	UtilitiesTest::LimitsTest();
 	UtilitiesTest::CheckConstructorTest();
 	UtilitiesTest::CheckTypeTest();
+	UtilitiesTest::LambdaTest();
 
 	DateAndTimeTest::ChronoIntervalTest();
 	DateAndTimeTest::DateTimeTests();
