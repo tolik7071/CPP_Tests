@@ -78,4 +78,18 @@ void UtilitiesTest::LambdaTest()
 	assert(false == minLambda(2, 1));
 	assert(true == minLambda(2, 10));
 	assert(true == minLambda(std::string("A"), std::string("Z")));
+
+	std::vector<std::string> names =
+	{
+		"1st string.",
+		"2nd string.",
+		"3rd string."
+	};
+
+	auto result = std::find_if(std::begin(names), std::end(names),
+		[](const std::string& str) -> bool
+		{
+			return str == "2nd string.";
+		});
+	assert(result != std::end(names));
 }
