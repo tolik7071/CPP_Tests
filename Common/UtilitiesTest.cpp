@@ -3,6 +3,7 @@
 #endif // _MSC_VER
 #include "UtilitiesTest.h"
 #include "common.h"
+#include <string>
 
 using namespace UtilitiesTest;
 
@@ -92,4 +93,54 @@ void UtilitiesTest::LambdaTest()
 			return str == "2nd string.";
 		});
 	assert(result != std::end(names));
+}
+
+struct employee
+{
+	unsigned id;
+	std::string name;
+	unsigned salary;
+};
+
+void UtilitiesTest::DecompositionTest()
+{
+	std::pair<std::string, int> pair = std::make_pair("Test string", 10);
+	auto &[text, value] = pair;
+	assert(text == pair.first && value == pair.second);
+
+	std::vector<employee> employees
+	{
+		{0, "Jim", 1000},
+		{1, "Kate", 2000},
+		{2, "Tom", 500}
+	};
+
+	for (const auto& [id, name, salary] : employees)
+	{
+		std::cout << id << " " << name << " " << salary << std::endl;
+	}
+}
+
+template <typename ... Ts>
+auto sum(Ts ... ts)
+{
+	return (ts + ...);
+}
+
+template <typename T, typename ... Ts>
+bool within(T min, T max, Ts ...ts)
+{
+	return ((ts >= min && ts <= max) && ...);
+}
+
+void UtilitiesTest::ParameterPackTest()
+{
+	int s1{ sum(3, 5, 7) };
+	assert(s1 == 15);
+
+	std::string s2 = sum(std::string("Hi, "), std::string("world!"));
+	assert(s2 == "Hi, world!");
+
+	assert(within(2, 5, 3, 4, 5));
+	assert(!within(2, 5, 3, 4, 6));
 }

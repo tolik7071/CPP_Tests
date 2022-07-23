@@ -166,6 +166,7 @@
     <ClInclude Include="..\Common\PathTests.h" />
     <ClInclude Include="..\Common\RTTI_Tests.h" />
     <ClInclude Include="..\Common\StreamTests.h" />
+    <ClInclude Include="..\Common\UserDefinedLiterals.h" />
     <ClInclude Include="..\Common\UtilitiesTest.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="..\Common\PathTests.cpp" />
     <ClCompile Include="..\Common\RTTITests.cpp" />
     <ClCompile Include="..\Common\StreamTests.cpp" />
+    <ClCompile Include="..\Common\UserDefinedLiterals.cpp" />
     <ClCompile Include="..\Common\UtilitiesTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

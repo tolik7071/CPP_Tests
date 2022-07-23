@@ -6,6 +6,7 @@ namespace MemoryManagement
 	void SharedPtrTest();
 	void UniquePtrTest();
 	void WeakPtrTest();
+	void GuardTest();
 
 	class MyData
 	{

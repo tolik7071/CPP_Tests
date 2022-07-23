@@ -11,6 +11,7 @@
 #include <initializer_list>
 #include "RTTI_Tests.h"
 #include "PathTests.h"
+#include "UserDefinedLiterals.h"
 
 int main(int argc, const char * argv[])
 {
@@ -18,11 +19,14 @@ int main(int argc, const char * argv[])
 	MemoryManagement::SharedPtrTest();
 	MemoryManagement::UniquePtrTest();
 	MemoryManagement::WeakPtrTest();
+	MemoryManagement::GuardTest();
 
 	UtilitiesTest::LimitsTest();
 	UtilitiesTest::CheckConstructorTest();
 	UtilitiesTest::CheckTypeTest();
 	UtilitiesTest::LambdaTest();
+	UtilitiesTest::DecompositionTest();
+	UtilitiesTest::ParameterPackTest();
 
 	DateAndTimeTest::ChronoIntervalTest();
 	DateAndTimeTest::DateTimeTests();
@@ -30,6 +34,9 @@ int main(int argc, const char * argv[])
 
 	ContainersTests::ArrayTests();
 	ContainersTests::MapTests();
+	ContainersTests::SetTests();
+	ContainersTests::IteratorsTests();
+	ContainersTests::RemoveElementFromVector();
 
 	LocaleTests::LocaleTest();
 
@@ -42,6 +49,8 @@ int main(int argc, const char * argv[])
 	RTTI_TESTS::DynamicCastTest();
 
 	PathTests::PathTests();
+
+	UserDefinedLiterals::LiteralsTest();
 
     return 0;
 }

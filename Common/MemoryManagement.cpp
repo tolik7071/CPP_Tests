@@ -5,6 +5,9 @@
 #include "common.h"
 #include <memory>
 #include <assert.h>
+#include <thread>
+#include <mutex>
+#include <chrono>
 
 using namespace MemoryManagement;
 
@@ -87,3 +90,23 @@ MemoryManagement::MyData::~MyData()
 	LOG_METHOD();
 }
 
+void Increment(std::mutex &mutex, int &count, unsigned long long ms)
+{
+	using namespace std::chrono_literals;
+
+	const std::lock_guard<std::mutex> lock(mutex);
+	std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+	std::cout << "count: " << ++count << "; in thread #" << std::this_thread::get_id() << ". Wait for " << ms << std::endl;
+}
+
+void MemoryManagement::GuardTest()
+{
+	int count = 0;
+	std::mutex mutex;
+
+	std::thread t1(Increment, std::ref(mutex), std::ref(count), 1500);
+	std::thread t2(Increment, std::ref(mutex), std::ref(count), 500);
+	
+	t1.join();
+	t2.join();
+}
